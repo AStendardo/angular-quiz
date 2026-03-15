@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, input, output, signal } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { takeWhile, tap } from 'rxjs/operators';
 import { TimeFormatPipe } from '../time-format-pipe';
