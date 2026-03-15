@@ -1,0 +1,15 @@
+<div class="rules-container">
+    <div class="rules-title">Parliamo di: {{ getArgumentTitle() }}</div>
+
+    <div class="rules-list">
+        <ul>
+            @for(rule of service.getRules(); track rule.id) {
+            <li><i class="fas fa-dot-circle rule-icon"></i> {{ rule.text }}</li>
+            }
+        </ul>
+    </div>
+
+    <div class="rules-suggest">Che ne dici, iniziamo?</div>
+</div>
+
+<forward [nextRoute]="'/question/0'"></forward>

@@ -1,0 +1,23 @@
+<div class="results-container">
+   <div class="results-title">Risultati</div>
+   <div class="result-title">{{ getResult() }}</div>
+   <div class="result-separator"></div>
+   @for (item of service.getCurrentTrivias(); track item.id) {
+   <div class="result-question">{{ item.question }}</div>
+   <div class="box-answer box-answer-result" [class.correct]="item.userAnswer == item.correctAnswer"
+      [class.wrong]="item.userAnswer != item.correctAnswer">
+      Tua risposta: {{ getUserAnswer($index) }}
+   </div>
+
+   @if (item.userAnswer != item.correctAnswer) {
+   <div class="box-answer box-answer-result" [class.correct]="true">
+      Risposta corretta: {{ item.answers[item.correctAnswer] }}
+   </div>
+   }
+   @if ($index < 9) { <div class="result-separator">
+</div>
+}
+}
+</div>
+
+<forward [nextRoute]="'/'"></forward>

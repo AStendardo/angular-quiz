@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+.rules-container {
+    @apply flex flex-col items-center justify-center;
+
+    @apply no-underline;
+
+    @apply bg-blue-100 border-2 border-blue-600 rounded-xl shadow-lg;
+
+    @apply p-2 m-2;
+
+    @apply md:w-[768px];
+}
+
+.rules-title {
+    @apply text-3xl font-bold text-center w-full;
+
+    @apply border-b border-gray-400;
+
+    @apply mb-1 pb-1;
+}
+
+.rules-suggest {
+    @apply text-center w-full;
+
+    @apply border-t border-gray-400;
+
+    @apply text-xl font-bold;
+
+    @apply m-1 p-1;
+}
+
+.rules-list {
+    @apply text-left;
+
+    @apply my-2 mb-1;
+}
+
+.rules-list ul {
+    @apply list-none;
+
+    @apply p-0;
+}
+
+.rules-list li {
+    @apply text-lg;
+
+    @apply py-2;
+}
+
+.rule-icon {
+    @apply text-blue-600;
+
+    @apply text-sm;
+
+    @apply mr-2;
+}

@@ -1,0 +1,15 @@
+<div class="question-container">
+    <div class="question-title">{{ getQuestion() }}</div>
+    <chrono (timeUp)="showCorrectAnswer()" #chrono />
+    <div class="answers">
+        @for(ans of getAnswers(); track ans) {
+        <div class="box-answer" (click)="checkAnswer($index)" [class.answered]="!!selectedAnswer"
+            [class.correct]="selectedAnswer != null && $index == getCorrectAnswer()"
+            [class.wrong]="selectedAnswer != null && $index == selectedAnswer && $index != getCorrectAnswer()">
+            {{ ans }}
+        </div>
+        }
+    </div>
+</div>
+
+<forward [style.visibility]="selectedAnswer != null ? 'visible' : 'hidden'" [nextRoute]="getNextRoute()" (forwardClicked)="questionChanged();" />

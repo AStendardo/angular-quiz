@@ -1,0 +1,12 @@
+<div class="welcome-container">
+    <div class="welcome-title text-2xl">Benvenuti nel Quiz Angular!</div>
+    <div class="welcome-title text-[1em] mb-2">Scegli un argomento:</div>
+    <div class="arguments">
+        @for (arg of service.getArguments(); track arg.id) {
+        <argument [id]="arg.id" [title]="arg.title" [iconClass]="arg.iconClass"
+            (argumentClicked)="setSelectedArgument($event)" [isSelected]="service.isSelectedArgument($index)" />
+        }
+    </div>
+
+    <forward [style.visibility]="service.getSelectedArgument() != -1 ? 'visible' : 'hidden'" [nextRoute]="'/rules'"></forward>
+</div>

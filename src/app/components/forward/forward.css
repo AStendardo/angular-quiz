@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.forward-button {
+    @apply flex items-center justify-center;
+
+    @apply bg-blue-100 text-blue-600 border-2 border-blue-600 rounded-xl shadow-lg;
+
+    @apply transition duration-300 ease-in-out cursor-pointer;
+
+    @apply hover:bg-cyan-200 hover:shadow-xl hover:-translate-y-[3px];
+
+    @apply no-underline text-lg font-bold;
+
+    @apply mx-auto my-2 py-2 px-4;
+}

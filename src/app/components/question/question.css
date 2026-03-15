@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+.question-container {
+    @apply bg-blue-100 border-2 border-blue-600 rounded-xl shadow-lg;
+
+    @apply p-2 m-2;
+
+    @apply md:w-[760px] md:h-[300px];
+}
+
+.answers {
+    @apply w-full flex flex-col;
+
+    @apply sm:grid sm:grid-cols-2;
+}
+
+.question-title {
+    @apply flex flex-col align-middle justify-center;
+
+    @apply font-bold whitespace-pre-wrap;
+
+    @apply md:text-xl font-bold text-center md:h-[80px];
+
+    @apply border border-solid border-gray-400;
+
+    @apply mb-1 p-2;
+}
+
+.box-answer {
+    @apply h-[50px] h-2 flex flex-row items-center justify-start p-2.5 text-left;
+
+    @apply bg-white border-2 border-blue-600 rounded-xl shadow-lg m-2;
+
+    @apply transition duration-300 ease-in-out cursor-pointer;
+
+    @apply hover:bg-cyan-200 hover:shadow-xl hover:-translate-y-[3px];
+
+}
+
+.box-answer.correct {
+    @apply bg-green-200 border-green-300 text-green-800;
+}
+
+.box-answer.wrong {
+    @apply bg-red-200 border-red-300 text-red-800;
+}
+
+.box-answer.answered {
+    @apply cursor-not-allowed;
+
+    @apply hover:translate-y-0 hover:bg-white;
+}
+
+.box-answer.correct.answered {
+    @apply bg-green-200 border-green-300 text-green-800;
+}
+
+.box-answer.wrong.answered {
+    @apply bg-red-200 border-red-300 text-red-800;
+}

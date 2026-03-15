@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@layer components {
+    .background-overlay {
+
+        @apply w-full h-full;
+
+        @apply z-[-1] opacity-[0.1] fixed bg-[url(./app/assets/images/angular-logo.png)] bg-repeat;
+
+        @apply top-0 left-0;
+    }
+
+    .content {
+        @apply relative z-1 h-screen grid place-items-center;
+    }
+}

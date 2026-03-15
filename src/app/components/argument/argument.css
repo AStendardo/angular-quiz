@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+.box-title {
+    @apply text-2xl font-bold;
+
+    @apply mb-0;
+}
+
+.box-icon {
+    @apply text-3xl text-blue-600;
+
+    @apply mt-0 mb-0;
+}
+
+.box-argument {
+    @apply flex flex-col items-center justify-around;
+
+    @apply h-[100px];
+
+    @apply bg-blue-100 border-2 border-blue-600 rounded-xl shadow-lg;
+
+    @apply hover:bg-cyan-200 hover:shadow-xl hover:-translate-y-[3px];
+
+    @apply transition duration-300 ease-in-out cursor-pointer;
+
+    @apply text-center;
+
+    @apply p-1 m-1;
+}
+
+.box-argument.selected {
+    @apply bg-cyan-300 border-[3px] translate-y-0 shadow-md shadow-blue-600;
+
+    @apply hover:bg-cyan-400;
+}

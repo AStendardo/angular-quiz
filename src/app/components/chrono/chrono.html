@@ -1,0 +1,4 @@
+<div class="timer" [class.normal]="timeLeft() > 3" [class.red]="timeLeft() <= 3">
+    <i class="timer-icon fa-solid fa-stopwatch" [ngClass]="{'timer-icon-red': timeLeft() <= 3}"></i>
+    {{ timeLeft() | timeFormat}}
+</div>

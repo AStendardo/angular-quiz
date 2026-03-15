@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.timer {
+    @apply border border-solid border-gray-400;
+
+    @apply transition-colors duration-300 ease-in-out;
+
+    @apply text-2xl font-bold text-center;
+
+    @apply p-2;
+}
+
+.timer.normal {
+    @apply text-black;
+}
+
+.timer.red {
+    @apply text-red-600;
+}
+
+.timer-icon {
+    @apply transition-colors duration-300 ease-in-out;
+
+    @apply text-blue-800;
+
+    @apply p-2;
+}
+
+.timer-icon-red {
+    @apply text-red-600;
+}
